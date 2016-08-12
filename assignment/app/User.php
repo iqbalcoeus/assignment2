@@ -23,4 +23,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * The tasks that belong to the user.
+     */
+    public function tasks()
+    {
+        return $this->belongsToMany('App\Task');
+    }
 }
