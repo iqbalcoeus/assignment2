@@ -14,9 +14,12 @@ class AdminMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next, User $user)
+    public function handle($request, Closure $next)
     {
+        $user=$request->user();
         if($user->admin)
             return $next($request);
+        else
+             return redirect('/');
     }
 }
