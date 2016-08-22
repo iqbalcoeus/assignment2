@@ -12,6 +12,12 @@
 */
 
 Route::get('/', function () {
+	App::setLocale('en');
+    return view('welcome');
+});
+
+Route::get('/de', function () {
+	App::setLocale('de');
     return view('welcome');
 });
 
@@ -85,3 +91,15 @@ Route::get('project/detail/{project}', function(App\Project $project){
 
  });
  Route::post('task/{task}/remove/assignee', 'TaskController@removeAssignee');
+
+ Route::get('check/locale/en', function(){
+ 	App::setLocale('en');
+ 	 
+	return trans('message.welcome');
+ });
+
+  Route::get('check/locale/de', function(){
+ 	App::setLocale('de');
+ 	 
+	return trans('message.welcome');
+ });
