@@ -32,10 +32,10 @@
 			</div>
 			<div class="row">
 				<label class="col-md-2">	Project's Tasks:</label>
-				<a href="{{ url('task/list/'.$project->id) }}" class="col-md-10">See All</a>
+				<a href="{{ url('/task/list/'.$project->id) }}" class="col-md-10">See All</a>
 
 			</div>
-			<a href="{{ url('task/create/'.$project->id) }}" class="col-md-10">Create New Task</a>
+			<a href="{{ url('/task/create/'.$project->id) }}" class="col-md-10">Create New Task</a>
 		</div>
 	</article>
 </div>

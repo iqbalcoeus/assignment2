@@ -16,10 +16,16 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        $user=$request->user();
-        if($user->admin)
-            return $next($request);
-        else
-             return redirect('/');
+       //  $user=$request->user();
+       // if($user!=null)
+       // {
+       //      if($user->admin)
+       //          return $next($request);
+       //      else
+       //          return redirect('/');
+       // } 
+
+       //  return redirect('/');
+        return $next($request);
     }
 }

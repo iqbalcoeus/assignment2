@@ -9,7 +9,7 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/task/store/'.$project->id) }}">
                         {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
+                        <div class="form-group {{ $errors->has('title') ? ' has-error' : '' }}">
                             <label for="title" class="col-md-4 control-label">Task Name</label>
 
                             <div class="col-md-6">

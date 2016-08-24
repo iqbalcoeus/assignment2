@@ -42,9 +42,7 @@ Route::get('/home', 'HomeController@index');
 
 	Route::get('project/delete/{project}', 'ProjectController@delete');
 
-	Route::get('task/create/{project}', function(App\Project $project){
-		return view('task.create')->with('project', $project);
-	})->name('create-task');
+	Route::get('task/create/{project}','TaskController@create')->name('create-task');
 
 	Route::post('task/store/{project}', 'TaskController@store')->name('task-store');
 

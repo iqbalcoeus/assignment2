@@ -19,6 +19,10 @@ class TaskController extends Controller
 	// 		'category' => 'required',
 	// 		]);
 	// }
+    public function create(Project $project)
+    {
+        return view('task.create')->with('project', $project);
+    } 
 
     public function store(Project $project, Request $request)
     {
